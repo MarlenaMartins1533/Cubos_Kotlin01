@@ -12,7 +12,7 @@
         android:id="@+id/logoCubosIMG"
         android:layout_width="250dp"
         android:layout_height="70dp"
-        android:layout_margin="70dp"
+        android:layout_margin="60dp"
         android:background="@drawable/logo_cubos" />
 
     <TextView
@@ -32,7 +32,7 @@
         android:layout_height="wrap_content"
         android:gravity="center"
         android:hint="@string/tip_weight"
-        android:inputType="number"
+        android:inputType="numberDecimal"
         android:padding="15dp"
         android:textSize="20sp"
         tools:ignore="Autofill" />
@@ -43,7 +43,7 @@
         android:layout_height="wrap_content"
         android:gravity="center"
         android:hint="@string/tip_height"
-        android:inputType="number"
+        android:inputType="numberDecimal"
         android:padding="15dp"
         android:textSize="20sp"
         tools:ignore="Autofill" />

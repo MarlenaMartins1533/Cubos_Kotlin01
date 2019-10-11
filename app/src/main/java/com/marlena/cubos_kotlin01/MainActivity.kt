@@ -5,18 +5,17 @@ import android.os.Bundle
 import android.widget.Toast
 import com.squareup.picasso.Picasso
 import kotlinx.android.synthetic.main.activity_main.*
+import kotlinx.android.synthetic.main.linear_main.*
 
 class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+        setContentView(R.layout.linear_main)
 
-        Picasso
-            .get()
-            .load("https://amopets.com.br/wp-content/uploads/2018/06/gatos-felizes.gif")
-            .into(imageView)
-
+        calculateBTN.setOnClickListener {
+            goCalculate()
+        }
     }
 
     override fun onStart() {
@@ -42,4 +41,14 @@ class MainActivity : AppCompatActivity() {
         super.onStop()
         tosttest("VOLTEI GALERA, OnStop")
     }
+
+    fun goCalculate(){
+        var weight: String = weightEDT.text.toString()
+        var height: String = heightEDT.text.toString()
+
+        var imc: Float = weight.toFloat()/(height.toFloat()*height.toFloat())
+
+        Toast.makeText(this, "$imc", Toast.LENGTH_LONG).show()
+    }
+
 }
