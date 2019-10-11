@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+    android:gravity="center_horizontal"
+    android:orientation="vertical">
+
+    <ImageView
+        android:id="@+id/logoCubosIMG"
+        android:layout_width="250dp"
+        android:layout_height="70dp"
+        android:layout_margin="70dp"
+        android:background="@drawable/logo_cubos" />
+
+    <TextView
+        android:id="@+id/calculatorTXT"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:padding="8dp"
+        android:text="@string/calculator"
+        android:textColor="@color/colorBlue"
+        android:textSize="30sp"
+        android:textStyle="bold" />
+
+    <EditText
+        android:id="@+id/weightEDT"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:hint="@string/tip_weight"
+        android:inputType="number"
+        android:padding="15dp"
+        android:textSize="20sp"
+        tools:ignore="Autofill" />
+
+    <EditText
+        android:id="@+id/heightEDT"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:hint="@string/tip_height"
+        android:inputType="number"
+        android:padding="15dp"
+        android:textSize="20sp"
+        tools:ignore="Autofill" />
+
+    <Button
+        android:id="@+id/calculateBTN"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:background="@drawable/shape_button"
+        android:text="@string/calculate"
+        android:textColor="@color/colorWhite"
+        android:textSize="15sp" />
+
+</LinearLayout>

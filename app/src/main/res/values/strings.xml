@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">Cubos_Kotlin01</string>
+    <string name="calculator">Calculadora IMC</string>
+    <string name="tip_weight">Seu peso(kg)</string>
+    <string name="tip_height">Sua Altura(m)</string>
+    <string name="calculate">Calcular</string>
 </resources>
