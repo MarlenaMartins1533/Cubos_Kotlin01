@@ -16,6 +16,10 @@ class MainActivity : AppCompatActivity() {
         calculateBTN.setOnClickListener {
             goCalculate()
         }
+
+        cleanBTN.setOnClickListener {
+            goClean()
+        }
     }
 
     override fun onStart() {
@@ -43,12 +47,15 @@ class MainActivity : AppCompatActivity() {
     }
 
     fun goCalculate(){
-        var weight: String = weightEDT.text.toString()
-        var height: String = heightEDT.text.toString()
 
-        var imc: Float = weight.toFloat()/(height.toFloat()*height.toFloat())
-
+        val imc = weightEDT.text.toString().toFloat()/(heightEDT.text.toString().toFloat()*heightEDT.text.toString().toFloat())
         Toast.makeText(this, "$imc", Toast.LENGTH_LONG).show()
+    }
+
+    fun goClean(){
+
+        weightEDT.setText("")
+        heightEDT.setText("")
     }
 
 }

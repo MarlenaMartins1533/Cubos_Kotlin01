@@ -63,7 +63,7 @@
             android:textColor="@color/colorWhite" />
 
         <Button
-            android:id="@+id/limparBTN"
+            android:id="@+id/cleanBTN"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="25dp"
@@ -71,7 +71,7 @@
 
 
             android:background="@drawable/shape_button"
-            android:text="@string/limpar"
+            android:text="@string/clean"
             android:textColor="@color/colorWhite" />
 
         </RelativeLayout>
