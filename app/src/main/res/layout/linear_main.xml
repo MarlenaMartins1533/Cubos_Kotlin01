@@ -5,35 +5,33 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/background"
-    android:gravity="center_horizontal"
+    android:gravity="center"
     android:orientation="vertical">
-
-    <ImageView
-        android:id="@+id/logoCubosIMG"
-        android:layout_width="250dp"
-        android:layout_height="70dp"
-        android:layout_margin="60dp"
-        android:background="@drawable/logo_cubos" />
 
     <TextView
         android:id="@+id/calculatorTXT"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_margin="10dp"
         android:gravity="center"
         android:padding="8dp"
+
         android:text="@string/calculator"
         android:textColor="@color/colorBlue"
-        android:textSize="30sp"
+        android:textSize="35sp"
         android:textStyle="bold" />
 
     <EditText
         android:id="@+id/weightEDT"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_margin="10dp"
         android:gravity="center"
+
         android:hint="@string/tip_weight"
         android:inputType="numberDecimal"
         android:padding="15dp"
+
         android:textSize="20sp"
         tools:ignore="Autofill" />
 
@@ -41,21 +39,48 @@
         android:id="@+id/heightEDT"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_margin="10dp"
         android:gravity="center"
+
         android:hint="@string/tip_height"
         android:inputType="numberDecimal"
         android:padding="15dp"
+
         android:textSize="20sp"
         tools:ignore="Autofill" />
 
-    <Button
-        android:id="@+id/calculateBTN"
+    <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="50dp"
-        android:background="@drawable/shape_button"
-        android:text="@string/calculate"
-        android:textColor="@color/colorWhite"
-        android:textSize="15sp" />
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:layout_margin="15dp">
+
+        <Button
+            android:id="@+id/calculateBTN"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="15dp"
+            android:background="@drawable/shape_button"
+            style="?buttonBarButtonStyle"
+
+
+            android:text="@string/calculate"
+            android:textColor="@color/colorWhite"
+            android:textSize="15sp" />
+
+        <Button
+            android:id="@+id/limparBTN"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="15dp"
+            android:background="@drawable/shape_button"
+            style="?buttonBarButtonStyle"
+
+            android:text="@string/limpar"
+            android:textColor="@color/colorWhite"
+            android:textSize="18sp" />
+
+    </LinearLayout>
 
 </LinearLayout>
