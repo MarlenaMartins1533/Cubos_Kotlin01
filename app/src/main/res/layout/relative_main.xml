@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<RelativeLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/background"
-    android:orientation="vertical"
-    android:gravity="center">
+    android:gravity="center"
+    android:orientation="vertical">
 
     <TextView
         android:id="@+id/calculatorTXT"
@@ -14,9 +14,10 @@
         android:layout_height="wrap_content"
         android:gravity="center_horizontal"
         android:padding="8dp"
-        android:text="@string/calculator"
+
+        android:text="@string/imc"
         android:textColor="@color/colorBlue"
-        android:textSize="35sp"
+        android:textSize="40sp"
         android:textStyle="bold" />
 
     <EditText
@@ -24,39 +25,63 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@id/calculatorTXT"
-        android:layout_margin="10dp"
+        android:layout_margin="8dp"
         android:layout_centerHorizontal="true"
+        android:gravity="center"
+
         android:hint="@string/tip_weight"
         android:inputType="numberDecimal"
-        android:padding="15dp"
-        android:textSize="20sp" />
+        android:padding="16dp"
+        android:textSize="24sp"
+        tools:ignore="Autofill" />
+
+    <View
+        android:id="@+id/imageViewIV"
+        android:layout_width="240dp"
+        android:layout_height="4dp"
+        android:layout_below="@id/weightEDT"
+        android:layout_centerHorizontal="true"
+        android:background="@color/colorAccent"
+        android:gravity="center" />
 
     <EditText
         android:id="@+id/heightEDT"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@id/weightEDT"
+        android:layout_marginTop="8dp"
         android:layout_centerHorizontal="true"
         android:gravity="center"
+
         android:hint="@string/tip_height"
         android:inputType="numberDecimal"
-        android:padding="15dp"
-        android:textSize="20sp" />
+        android:padding="16dp"
+        android:textSize="24sp"
+        tools:ignore="Autofill" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toEndOf="@id/heightEDT"
+        android:layout_below="@id/imageViewIV"
+        android:paddingBottom="16dp"
+
+        android:text="@string/number"
+        android:textColor="@color/colorAccent"
+        android:textSize="24sp"
+        android:textStyle="bold" />
 
     <RelativeLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_centerInParent="true"
-        android:layout_margin="20dp"
-        android:orientation="horizontal"
-        android:gravity="center"
-        android:layout_below="@id/heightEDT">
+        android:layout_below="@id/heightEDT"
+        android:layout_centerHorizontal="true">
 
         <Button
             android:id="@+id/calculateBTN"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_margin="25dp"
+            android:layout_margin="24dp"
 
             android:background="@drawable/shape_button"
             android:text="@string/calculate"
@@ -66,14 +91,13 @@
             android:id="@+id/cleanBTN"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_margin="25dp"
+            android:layout_margin="24dp"
             android:layout_toEndOf="@id/calculateBTN"
-
 
             android:background="@drawable/shape_button"
             android:text="@string/clean"
             android:textColor="@color/colorWhite" />
 
-        </RelativeLayout>
+    </RelativeLayout>
 
 </RelativeLayout>

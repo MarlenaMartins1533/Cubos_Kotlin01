@@ -1,9 +1,9 @@
 package com.marlena.cubos_kotlin01
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
-import com.squareup.picasso.Picasso
 import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.linear_main.*
 
@@ -11,15 +11,21 @@ class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.linear_main)
+        setContentView(R.layout.activity_main)
 
-        calculateBTN.setOnClickListener {
-            goCalculate()
-        }
+        initListener()
+    }
 
-        cleanBTN.setOnClickListener {
-            goClean()
+    fun initListener() {
+
+        imcBTN.setOnClickListener {
+            goToCalculatorActivity()
         }
+    }
+
+    private fun goToCalculatorActivity() {
+        val intent = Intent(this, CalculatorActivity::class.java)
+        startActivity(intent)
     }
 
     override fun onStart() {
@@ -27,7 +33,7 @@ class MainActivity : AppCompatActivity() {
         tosttest("VOLTEI GALERA,onStart")
     }
 
-    private fun tosttest(text:String){
+    private fun tosttest(text: String) {
         Toast.makeText(this, text, Toast.LENGTH_LONG).show()
     }
 
@@ -45,17 +51,4 @@ class MainActivity : AppCompatActivity() {
         super.onStop()
         tosttest("VOLTEI GALERA, OnStop")
     }
-
-    fun goCalculate(){
-
-        val imc = weightEDT.text.toString().toFloat()/(heightEDT.text.toString().toFloat()*heightEDT.text.toString().toFloat())
-        Toast.makeText(this, "$imc", Toast.LENGTH_LONG).show()
-    }
-
-    fun goClean(){
-
-        weightEDT.setText("")
-        heightEDT.setText("")
-    }
-
 }

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -12,75 +12,95 @@
         android:id="@+id/calculatorTXT"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="10dp"
         android:gravity="center"
         android:padding="8dp"
 
-        android:text="@string/calculator"
+        android:text="@string/imc"
         android:textColor="@color/colorBlue"
-        android:textSize="35sp"
+        android:textSize="40sp"
         android:textStyle="bold" />
 
     <EditText
         android:id="@+id/weightEDT"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_margin="10dp"
+        android:layout_margin="16dp"
         android:gravity="center"
 
         android:hint="@string/tip_weight"
         android:inputType="numberDecimal"
-        android:padding="15dp"
-
-        android:textSize="20sp"
+        android:padding="16dp"
+        android:textSize="24sp"
         tools:ignore="Autofill" />
 
-    <EditText
-        android:id="@+id/heightEDT"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_margin="10dp"
-        android:gravity="center"
-
-        android:hint="@string/tip_height"
-        android:inputType="numberDecimal"
-        android:padding="15dp"
-
-        android:textSize="20sp"
-        tools:ignore="Autofill" />
+    <View
+        android:id="@+id/imageViewIV"
+        android:layout_width="240dp"
+        android:layout_height="4dp"
+        android:background="@color/colorAccent" />
 
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <EditText
+            android:id="@+id/heightEDT"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            android:gravity="center"
+
+            android:hint="@string/tip_height"
+            android:inputType="numberDecimal"
+            android:padding="16dp"
+
+            android:textSize="24sp"
+            tools:ignore="Autofill" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingBottom="16dp"
+
+            android:text="@string/number"
+            android:textColor="@color/colorAccent"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
         android:gravity="center"
-        android:orientation="horizontal"
-        android:layout_margin="15dp">
+        android:orientation="horizontal">
 
         <Button
             android:id="@+id/calculateBTN"
+            style="?buttonBarButtonStyle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_margin="15dp"
+            android:layout_margin="16dp"
             android:background="@drawable/shape_button"
-            style="?buttonBarButtonStyle"
 
 
             android:text="@string/calculate"
             android:textColor="@color/colorWhite"
-            android:textSize="15sp" />
+            android:textSize="16sp" />
 
         <Button
             android:id="@+id/cleanBTN"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_margin="15dp"
+            android:layout_margin="16dp"
             android:background="@drawable/shape_button"
-            style="?buttonBarButtonStyle"
 
             android:text="@string/clean"
             android:textColor="@color/colorWhite"
-            android:textSize="18sp" />
-
+            android:textSize="18sp"
+            tools:ignore="ButtonStyle" />
     </LinearLayout>
 
 </LinearLayout>

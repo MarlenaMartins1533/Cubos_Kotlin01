@@ -15,43 +15,72 @@
         android:gravity="center"
         android:padding="8dp"
 
-        android:text="@string/calculator"
+        android:text="@string/imc"
         android:textColor="@color/colorBlue"
-        android:textSize="35sp"
+        android:textSize="40sp"
         android:textStyle="bold"
 
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintHorizontal_bias="1"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.3" />
+        app:layout_constraintVertical_bias="0.24" />
 
     <EditText
         android:id="@+id/weightEDT"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="8dp"
 
         android:hint="@string/tip_weight"
         android:inputType="numberDecimal"
-        android:padding="15dp"
-        android:textSize="20sp"
+        android:padding="16dp"
+        android:textSize="24sp"
 
         app:layout_constraintTop_toBottomOf="@id/calculatorTXT"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         tools:ignore="Autofill" />
 
+    <View
+        android:id="@+id/imageViewIV"
+        android:layout_width="240dp"
+        android:layout_height="4dp"
+        android:layout_marginTop="16dp"
+        android:background="@color/colorAccent"
+
+        app:layout_constraintTop_toBottomOf="@id/weightEDT"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="32dp"
+        android:paddingBottom="16dp"
+
+        android:text="@string/number"
+        android:textColor="@color/colorAccent"
+        android:textSize="24sp"
+        android:textStyle="bold"
+
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.136"
+        app:layout_constraintStart_toEndOf="@+id/heightEDT"
+        app:layout_constraintTop_toBottomOf="@id/imageViewIV" />
+
     <EditText
         android:id="@+id/heightEDT"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
 
         android:hint="@string/tip_height"
         android:inputType="numberDecimal"
-        android:padding="15dp"
-        android:textSize="20sp"
+        android:padding="16dp"
+        android:textSize="24sp"
 
-        app:layout_constraintTop_toBottomOf="@id/weightEDT"
+        app:layout_constraintTop_toBottomOf="@id/imageViewIV"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         tools:ignore="Autofill" />
@@ -67,33 +96,33 @@
         android:id="@+id/calculateBTN"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_margin="25dp"
+        android:layout_margin="24dp"
 
         android:background="@drawable/shape_button"
-        android:elevation="5dp"
+        android:elevation="8dp"
         android:text="@string/calculate"
         android:textColor="@color/colorWhite"
 
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@id/guideline"
         app:layout_constraintTop_toBottomOf="@id/heightEDT"
-        app:layout_constraintVertical_bias="0.10" />
+        app:layout_constraintVertical_bias="0.08" />
 
     <Button
         android:id="@+id/cleanBTN"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_margin="25dp"
+        android:layout_margin="24dp"
 
         android:background="@drawable/shape_button"
-        android:elevation="5dp"
+        android:elevation="8dp"
         android:text="@string/clean"
         android:textColor="@color/colorWhite"
 
         app:layout_constraintStart_toEndOf="@id/guideline"
         app:layout_constraintTop_toBottomOf="@id/heightEDT"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintVertical_bias="0.10" />
+        app:layout_constraintVertical_bias="0.08" />
 
 
 
