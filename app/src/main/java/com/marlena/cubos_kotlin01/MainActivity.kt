@@ -27,28 +27,4 @@ class MainActivity : AppCompatActivity() {
         val intent = Intent(this, CalculatorActivity::class.java)
         startActivity(intent)
     }
-
-    override fun onStart() {
-        super.onStart()
-        tosttest("VOLTEI GALERA,onStart")
-    }
-
-    private fun tosttest(text: String) {
-        Toast.makeText(this, text, Toast.LENGTH_LONG).show()
-    }
-
-    override fun onResume() {
-        super.onResume()
-        tosttest("VOLTEI GALERA, OnResume")
-    }
-
-    override fun onPause() {
-        super.onPause()
-        tosttest("VOLTEI GALERA, OnPause")
-    }
-
-    override fun onStop() {
-        super.onStop()
-        tosttest("VOLTEI GALERA, OnStop")
-    }
 }

@@ -9,9 +9,23 @@
     android:orientation="vertical">
 
     <TextView
+        android:id="@+id/informationsTXT"
+        android:background="@drawable/shape_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="24dp"
+        android:padding="8dp"
+
+        android:text="@string/informations"
+        android:textColor="@color/colorBlue"
+        android:textSize="24sp"
+        android:textStyle="bold" />
+
+    <TextView
         android:id="@+id/calculatorTXT"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_below="@id/informationsTXT"
         android:gravity="center_horizontal"
         android:padding="8dp"
 
