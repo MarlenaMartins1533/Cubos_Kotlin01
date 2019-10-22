@@ -1,13 +1,14 @@
-package com.marlena.cubos_kotlin01
+package com.marlena.cubos_kotlin01.main
 
+import android.content.Context
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.widget.Toast
+import com.marlena.cubos_kotlin01.R
+import com.marlena.cubos_kotlin01.calculator.CalculatorActivity
 import kotlinx.android.synthetic.main.activity_main.*
-import kotlinx.android.synthetic.main.linear_main.*
 
-class MainActivity : AppCompatActivity() {
+class MainActivity : AppCompatActivity(),Main.View {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -16,7 +17,7 @@ class MainActivity : AppCompatActivity() {
         initListener()
     }
 
-    fun initListener() {
+    override fun initListener() {
 
         imcBTN.setOnClickListener {
             goToCalculatorActivity()
@@ -26,5 +27,8 @@ class MainActivity : AppCompatActivity() {
     private fun goToCalculatorActivity() {
         val intent = Intent(this, CalculatorActivity::class.java)
         startActivity(intent)
+    }
+    override fun getViewContext(): Context {
+        return this
     }
 }
