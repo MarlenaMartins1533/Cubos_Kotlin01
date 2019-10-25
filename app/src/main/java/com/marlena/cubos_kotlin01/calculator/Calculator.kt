@@ -8,10 +8,10 @@ interface Calculator {
         fun showMessage(message: String)
         fun getValue()
         fun startCalculate(weight: Float, height: Float): Float
+        fun callAlert(alertCod: Float)
         fun startClean()
     }
     interface Presenter: Scene.Presenter{
-        fun callAlert(alertCod: Float)
         fun requestMessage(message: String)
     }
 }

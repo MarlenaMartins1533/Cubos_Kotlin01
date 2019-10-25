@@ -21,8 +21,6 @@
             </intent-filter>
         </activity>
         <activity android:name=".calculator.CalculatorActivity"/>
-        <activity android:name=".calculator.CalculatorPresenter"/>
-        <activity android:name=".calculator.MainPresenter"/>
     </application>
 
 </manifest>
