@@ -1,3 +1,3 @@
 "# Cubos_Kotlin01" 
 
-![Screenshot](Image_IMC.PNG)
+![Image_IMC](Image_IMC.PNG)
